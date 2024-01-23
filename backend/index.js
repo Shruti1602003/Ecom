@@ -9,7 +9,15 @@ const cors = require("cors")
 const { log } = require("console")
 
 app.use(express.json()) 
-app.use(cors())
+app.use(cors(
+    {
+        origin: [""],
+        methods:["POST","GET"],
+        credentials: true
+        
+    }
+    
+))
 
 // ----------Deployment------------
 
