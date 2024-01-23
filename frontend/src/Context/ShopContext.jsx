@@ -21,7 +21,7 @@ const ShopContextProvider = (props) => {
         .then((data)=>setAll_Product(data))
 
         if(localStorage.getItem('auth-token')){
-            fetch('ecom-api-steel.vercel.app/getcart',{
+            fetch('https://ecom-api-steel.vercel.app/getcart',{
                 method:'POST',
                 headers:{
                     Accept:'application/form-data',
@@ -37,7 +37,7 @@ const ShopContextProvider = (props) => {
     const addToCart = (itemId) => {
         setCartItems((prev)=>({...prev,[itemId]:prev[itemId]+1}))
         if(localStorage.getItem('auth-token')){
-            fetch('ecom-api-steel.vercel.app/addtocart',{
+            fetch('https://ecom-api-steel.vercel.app/addtocart',{
                 method:'POST',
                 headers:{
                     Accept:'application/form-data',
@@ -54,7 +54,7 @@ const ShopContextProvider = (props) => {
     const removeFromCart = (itemId) => {
         setCartItems((prev)=>({...prev,[itemId]:prev[itemId]-1}))
         if(localStorage.getItem('auth-token')){
-            fetch('ecom-api-steel.vercel.app/removefromcart',{
+            fetch('https://ecom-api-steel.vercel.app/removefromcart',{
                 method:'POST',
                 headers:{
                     Accept:'application/form-data',
