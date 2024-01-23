@@ -11,7 +11,7 @@ const { log } = require("console")
 app.use(express.json()) 
 app.use(cors(
     {
-        origin: ["https://ecom-lime-nine.vercel.app"],
+        origin: ["*"],
         methods:["POST","GET"],
         credentials: true
         
