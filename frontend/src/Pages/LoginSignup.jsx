@@ -18,7 +18,7 @@ const LoginSignup = () => {
     console.log("login",formData)
 
     let responseData;
-    await fetch('http://localhost:4000/login',{
+    await fetch('ecom-api-steel.vercel.app/login',{
       method:'POST',
       headers:{
         Accept:'application/form-data',
@@ -41,7 +41,7 @@ const LoginSignup = () => {
     console.log("signup", formData)
 
     let responseData;
-    await fetch('http://localhost:4000/signup',{
+    await fetch('ecom-api-steel.vercel.app/signup',{
       method:'POST',
       headers:{
         Accept:'application/form-data',
